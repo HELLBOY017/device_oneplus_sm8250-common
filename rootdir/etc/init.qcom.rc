@@ -79,6 +79,10 @@ on init
     
     # Vibration intensity
     chown system system /sys/class/leds/vibrator/level
+    
+on fs
+    # Charger
+    write /proc/fastchg_fw_update 1
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
