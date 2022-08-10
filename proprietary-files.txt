@@ -279,16 +279,6 @@ vendor/bin/init.qti.chg_policy.sh
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
 
-# Charger (Oplus)
-odm/bin/hw/vendor.oplus.hardware.charger@1.0-service
-odm/etc/init/vendor.oplus.hardware.charger@1.0-service.rc
-odm/etc/vintf/manifest/manifest_oplus_charger.xml
-odm/firmware/fastchg/19805/oplus_vooc_fw_rk826.bin
-odm/firmware/fastchg/19811/oplus_vooc_fw.bin
-odm/firmware/fastchg/19821/oplus_vooc_fw.bin
-odm/firmware/fastchg/20828/oplus_vooc_fw_rk826.bin
-odm/lib64/vendor.oplus.hardware.charger@1.0.so
-
 # CNE
 vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
@@ -497,6 +487,12 @@ odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 odm/lib64/vendor.qti.esepowermanager@1.0.so
 odm/lib64/vendor.qti.esepowermanager@1.1.so
+
+# Fastchg firmware
+odm/firmware/fastchg/19805/oplus_vooc_fw_rk826.bin
+odm/firmware/fastchg/19811/oplus_vooc_fw.bin
+odm/firmware/fastchg/19821/oplus_vooc_fw.bin
+odm/firmware/fastchg/20828/oplus_vooc_fw_rk826.bin
 
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
