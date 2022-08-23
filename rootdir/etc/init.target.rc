@@ -97,6 +97,7 @@ on property:ro.boot.prjname=*
 
 on early-boot
     start vendor.sensors
+    rm /data/system/package_cache
 
     # SSR
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
