@@ -9,6 +9,10 @@ vendor.oplus.hardware.charger::ICharger                                       u:
 # CommonDcs
 vendor.oplus.hardware.commondcs::ICommonDcsHalService                         u:object_r:hal_commondcs_oplus_hwservice:s0
 
+# Display (Pixelworks)
+vendor.pixelworks.hardware.display::IIris           u:object_r:hal_graphics_composer_hwservice:s0
+vendor.pixelworks.hardware.feature::IIrisFeature    u:object_r:hal_graphics_composer_hwservice:s0
+
 # Dolby
 vendor.dolby.hardware.dms::IDms                                            u:object_r:hal_dms_hwservice:s0
 
