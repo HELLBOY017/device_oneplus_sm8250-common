@@ -25,6 +25,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit proprietary libraries
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+    
+# OTA
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
