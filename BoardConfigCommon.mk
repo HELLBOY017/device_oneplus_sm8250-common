@@ -51,15 +51,13 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := kryo785
+TARGET_CPU_VARIANT := cortex-a76
 
-ifeq (,$(filter %_64,$(TARGET_PRODUCT)))
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := kryo385
-endif
+TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -142,6 +140,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc BRAND_SHOW_FLAG=oneplus
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := liyuu
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-liyuu
 
