@@ -72,6 +72,7 @@ void vendor_load_properties() {
 
   auto prj_version = std::stoi(GetProperty("ro.boot.prj_version", "0"));
   auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
+  property_override("ro.build.fingerprint", "google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys");
 
   switch(prj_version){
   	/* OnePlus 8 */
