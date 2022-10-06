@@ -43,14 +43,7 @@ on property:sys.boot_completed=1
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
     write /proc/sys/vm/dirty_background_ratio 10
-
-    # Setup runtime cpusets
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-3,5-6
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/restricted/cpus 0-3
-
+    
     # Setup runtime schedTune
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.prefer_high_cap 0
@@ -73,31 +66,11 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on early-init
-    # configure governor settings
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
-
-    # configure governor settings for big cluster
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
-
-    # configure governor settings for big big CPU
-    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us 20000
-
     # Disable UFS clock scaling
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
 
 on init
-    # Boot time cpuset and stune
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-5
-    write /dev/cpuset/system-background/cpus 0-5
-    write /dev/cpuset/restricted/cpus 2-5
+    # Boot time stune
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.prefer_high_cap 1
     write /dev/stune/foreground/schedtune.boost 100
@@ -106,11 +79,9 @@ on init
     write /dev/stune/schedtune.boost 100
     write /dev/stune/top-app/schedtune.prefer_idle 1
     write /dev/stune/top-app/schedtune.prefer_high_cap 1
-    write /dev/stune/top-app/schedtune.boost 100
-
+    
     # Boot time fs tuning
     write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/scheduler cfq
     write /sys/block/sda/queue/iosched/slice_idle 0
     write /sys/block/sda/queue/nr_requests 256
 
