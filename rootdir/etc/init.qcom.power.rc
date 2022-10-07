@@ -70,6 +70,11 @@ on early-init
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
 
 on init
+    # Setup permission for Power HAL
+    chown system system /dev/stune/top-app/schedtune.boost
+
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    
     # Boot time stune
     write /dev/stune/foreground/schedtune.prefer_idle 1
     write /dev/stune/foreground/schedtune.prefer_high_cap 1
