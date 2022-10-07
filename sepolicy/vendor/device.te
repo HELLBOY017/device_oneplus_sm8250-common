@@ -9,3 +9,6 @@ type oplus_display_device, dev_type;
 
 # Fingerprint
 type fingerprintd_device, dev_type;
+
+# Wlchgmonitor
+type wlchg_device, dev_type;
