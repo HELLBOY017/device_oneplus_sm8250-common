@@ -46,7 +46,7 @@
     <bool name="config_haveNotch">true</bool>
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">60</integer>
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
 
     <!-- Controls the navigation bar interaction mode:
          0: 3 button mode (back, home, overview buttons)
@@ -59,6 +59,8 @@
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/fast_charge</string>
+    
+    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
     
     <!-- Defines custom Vendor sensor for pocket detection. -->
     <string name="config_pocketJudgeVendorProximitySensorName">oneplus.sensor.infrared.proximity</string>

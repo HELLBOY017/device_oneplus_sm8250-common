@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "WifiResCommon",
+    name: "OplusWifiResCommon",
     sdk_version: "current",
     vendor: true
 }

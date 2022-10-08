@@ -79,7 +79,6 @@ void vendor_load_properties() {
     case 19821:
 	device = "OnePlus8";
 	property_override("bluetooth.device.default_name", "OnePlus 8");
-	property_override("ro.vendor.usb.name", "OnePlus 8");
       switch (rf_version){
           /* China */
         case 11:
@@ -112,7 +111,6 @@ void vendor_load_properties() {
     case 19855:
 	device = "OnePlus8";
 	property_override("bluetooth.device.default_name", "OnePlus 8");
-	property_override("ro.vendor.usb.name", "OnePlus 8");
       switch (rf_version){
             /* T-Mobile */
         case 12:
@@ -130,7 +128,6 @@ void vendor_load_properties() {
     case 19867:
 	device = "OnePlus8";
 	property_override("bluetooth.device.default_name", "OnePlus 8");
-	property_override("ro.vendor.usb.name", "OnePlus 8");
       switch (rf_version){
             /* T-Mobile */
         case 25:
@@ -148,7 +145,6 @@ void vendor_load_properties() {
     case 19811:
 	device = "OnePlus8Pro";
 	property_override("bluetooth.device.default_name", "OnePlus 8 Pro");
-	property_override("ro.vendor.usb.name", "OnePlus 8 Pro");
       switch (rf_version){
           /* China */
         case 11:
@@ -181,7 +177,6 @@ void vendor_load_properties() {
     case 19805:
 	device = "OnePlus8T";
 	property_override("bluetooth.device.default_name", "OnePlus 8T");
-	property_override("ro.vendor.usb.name", "OnePlus 8T");
       switch (rf_version){
            /* China */
         case 11:
@@ -214,7 +209,6 @@ void vendor_load_properties() {
     case 20809:
 	device = "OnePlus8T";
 	property_override("bluetooth.device.default_name", "OnePlus 8T");
-	property_override("ro.vendor.usb.name", "OnePlus 8T");
       switch (rf_version){
             /* T-Mobile */
         case 12:
@@ -232,7 +226,6 @@ void vendor_load_properties() {
    case 20828:
 	device = "OnePlus9R";
 	property_override("bluetooth.device.default_name", "OnePlus 9R");
-	property_override("ro.vendor.usb.name", "OnePlus 9R");
       switch (rf_version){
             /* China */
       case 11:
@@ -254,7 +247,6 @@ void vendor_load_properties() {
    case 20838:
 	device = "OnePlus9R";
 	property_override("bluetooth.device.default_name", "OnePlus 9R");
-	property_override("ro.vendor.usb.name", "OnePlus 9R");
       switch (rf_version){
             /* China */
       case 11:
