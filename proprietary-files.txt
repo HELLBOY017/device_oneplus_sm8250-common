@@ -683,6 +683,7 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Listen
+vendor/lib/hw/sound_trigger.primary.kona.so|eb5cfbc063f82cd80521a7dee8fa73c7fab22486
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libgcs-calwrapper.so
