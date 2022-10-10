@@ -1,2 +1,2 @@
-# Display
-dp.service    u:object_r:vendor_dp_service:s0
+# QTEE
+com.qualcomm.qti.qms.service.trustzoneaccess.GetClientAppInfo    u:object_r:vendor_qms_service:s0

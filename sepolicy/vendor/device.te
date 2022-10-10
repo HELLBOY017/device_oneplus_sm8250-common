@@ -1,14 +1,11 @@
-# Camera
-type stmvl53l1_ranging_device, dev_type;
-
-# Charging
-type oplus_charger_device, dev_type, fs_type;
-
-# Display
-type oplus_display_device, dev_type;
-
 # Fingerprint
-type fingerprintd_device, dev_type;
+type fingerprint_device, dev_type;
+
+# Reserve
+type vendor_reserve_partition, dev_type;
+
+# Sensors
+type ssc_interactive_device, dev_type;
 
 # Wlchgmonitor
 type wlchg_device, dev_type;
