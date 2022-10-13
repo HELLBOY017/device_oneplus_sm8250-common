@@ -412,6 +412,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
+    OplusColorModes \
+    OplusSettingsColorModes \
     OplusWifiResCommon
 
 # Partition
