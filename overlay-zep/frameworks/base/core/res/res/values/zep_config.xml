@@ -46,7 +46,7 @@
     <bool name="config_haveNotch">true</bool>
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">60</integer>
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
 
     <!-- Controls the navigation bar interaction mode:
          0: 3 button mode (back, home, overview buttons)
